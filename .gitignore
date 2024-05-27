@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+
+
+# Local environment variables
+.env
+
+# Windows
+Thumbs.db
+
+# Environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+
+# VS Code settings
+.vscode/
+
+
+# Django specific
+*.log
+local_settings.py

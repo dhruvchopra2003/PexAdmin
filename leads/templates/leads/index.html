@@ -1,0 +1,32 @@
+{% extends "leads/layout.html" %}
+
+{% block body %}
+<div class="container mt-5">
+  <h2>CURRENT LEADS:</h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th style="width: 10%;">Lead Id</th>
+          <th style="width: 70%;">Chat History</th>
+          <th style="width: 20%;">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for item in sorted_leads %}
+        <tr>
+          {% comment %}
+          <td>{{ item.lead_id }} </td>
+          {% endcomment %}
+          
+          <td><a href="{% url 'leads:leadView' item.lead_id %}"> {{ item.lead_id }} </a></td> 
+
+          <td style="word-wrap: break-word;">{{ item.chat_history|truncatechars:200 }}</td>
+          <td>{{ item.date }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

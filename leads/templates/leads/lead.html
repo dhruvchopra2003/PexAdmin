@@ -1,0 +1,27 @@
+{% extends "leads/layout.html" %}
+
+{% block body %}
+<a href="{% url 'leads:index' %}" class="btn btn-primary mb-3">Back</a>
+<a href="{% url 'leads:finalLead' lead.lead_id%}" class="btn btn-primary mb-3">Generate Lead</a>
+<div class="container mt-3">
+    <h2 class="mb-4">Lead Details</h2>
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            Lead ID: {{ lead.lead_id }}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Date: {{ date }}</h5>
+            <p class="card-text">Chat History:</p>
+            <ul class="list-group">
+                {% for chat in lead.chat_history %}
+                {% if chat.role != 'system' %}
+                <li class="list-group-item">
+                    <strong>{{ chat.role }}:</strong> {{ chat.content | safe}}
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
