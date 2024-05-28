@@ -92,9 +92,11 @@ WSGI_APPLICATION = "pex.wsgi.application"
 #     }
 # }
 
-DATABASES = {
-    "default": dj_database_url.parse(os.getenv("DATABASE_URL"))
-}
+test_database_url = "postgres://pexdb_user:m9VcQAC4EVuirZE6SByjcipXLyN5xWRR@dpg-cpanlllds78s73d4lmg0-a.singapore-postgres.render.com/pexdb"
+
+
+DATABASES = {"default": dj_database_url.parse(test_database_url)}
+# DATABASES = {"default": dj_database_url.parse(os.getenv("DATABASE_URL"))}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
