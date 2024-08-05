@@ -92,10 +92,10 @@ WSGI_APPLICATION = "pex.wsgi.application"
 #     }
 # }
 
-test_database_url = "postgres://pexdb_user:m9VcQAC4EVuirZE6SByjcipXLyN5xWRR@dpg-cpanlllds78s73d4lmg0-a.singapore-postgres.render.com/pexdb"
+# test_database_url = "postgres://pexdb_user:m9VcQAC4EVuirZE6SByjcipXLyN5xWRR@dpg-cpanlllds78s73d4lmg0-a.singapore-postgres.render.com/pexdb"
 
 
-DATABASES = {"default": dj_database_url.parse(test_database_url)}
+# DATABASES = {"default": dj_database_url.parse(test_database_url)}
 # DATABASES = {"default": dj_database_url.parse(os.getenv("DATABASE_URL"))}
 
 # Password validation
