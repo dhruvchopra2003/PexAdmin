@@ -85,12 +85,12 @@ WSGI_APPLICATION = "pex.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
 
 # test_database_url = "postgres://pexdb_user:m9VcQAC4EVuirZE6SByjcipXLyN5xWRR@dpg-cpanlllds78s73d4lmg0-a.singapore-postgres.render.com/pexdb"
 
